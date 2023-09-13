@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BORROWIT</title>
+    <link rel="icon" href="">
+
+    <!-- swiper CSS cdn link  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+    <!-- custom CSS file link  -->
+    <link rel="stylesheet" href="desktop-19.css">
+
+    <!-- Font awesome cdn link  -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+
+    <!-- header section starts  -->
+
+    <header class="header">
+
+        <a href="#" class="logo">BORROW <span>IT</span></a>
+
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#" style="color: #219653; font-size: 2.2em;">Dashboard</a>
+            <a href="#">Add Product</a>
+            <a href="#">Help</a>
+            <!-- <a href="#">contact us</a> -->
+        </nav>
+
+
+        <div class="icons">
+            <a href="#" class="btn1">Welcome, Granghea</a>
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </div>
+
+    </header>
+
+
+    <!-- header section starts  -->
+
+
+<!------------------------------------------ section 1 starts  ---------------------------------------->
+
+<!-- ...---------------------------------- Existing Header .------------------------------------------------>
+
+<!-- Main content starts -->
+<div class="main-content">
+
+    <!-- Section 1: Filters -->
+    <section class="filters">
+        <h1>Asset Filters</h1>
+        
+        <!-- Location Filter -->
+        <div class="filter-item">
+            <label for="location"><strong>Location:</strong></label>
+            <input type="text" id="location" placeholder="Enter Location">
+        </div>
+
+        <!-- Asset Type Filter -->
+        <div class="filter-item">
+            <label for="asset-type"><strong>Asset Type:</strong></label>
+            <select id="asset-type">
+                <option value="type1">Laptop</option>
+                <option value="type2">Headsets</option>
+                <option value="type2">Mouse</option>
+                <option value="type2">Books</option>
+                <!-- Add more asset types as needed -->
+            </select>
+        </div>
+
+        <!-- Brands Filter -->
+        <div class="filter-item">
+            <label for="brands"><strong>Brands:</strong></label>
+            <select id="brands">
+                <option value="brand1">Dell</option>
+                <option value="brand2">HCL</option>
+                <option value="brand1">HP</option>
+                <option value="brand1">MacBook</option>
+                <option value="brand1">Brand 1</option>
+                <!-- Add more brands as needed -->
+            </select>
+        </div>
+
+        <!-- Price Range Filter -->
+        <div class="filter-item">
+            <label><b>Price Range:</b></label>
+            <label><b>Price Per Day:</b></label>
+            <div class="range-slider">
+                <input type="range" id="min-price" min="0" max="1000" oninput="updateValues()">
+                <label id="min-price-label"> 0</label>
+            </div>
+            <label><b>Price per month</b></label>
+            <div class="range-slider">
+                <input type="range" id="max-price" min="0" max="1000" oninput="updateValues()">
+                <label id="max-price-label">100000</label>
+            </div>
+        </div>
+
+        
+        <!-- Availability Filter -->
+        <div class="filter-item">
+            <label for="from-date"><strong>Available from:</strong></label>
+            <input type="date" id="from-date">
+            <label for="to-date"> <strong>Available to:</strong></label>
+            <input type="date" id="to-date">
+        </div>
+    </section>
+
+    <!-- Section 2: Products -->
+    <section class="products">
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search for your product..">
+        </div>
+
+        <!-- Featured Products -->
+        <div class="featured-products">
+            <h2>Featured Products</h2>
+            <div class="product-card advertisement-card">
+                <img src="https://imageio.forbes.com/specials-images/imageserve/64e74ad803781abed13b0612/Apple--iPhone--iPhone-15--iPhone-15-Pro--iPhone-15-Pro-Max--iPhone-15-release--new/0x0.jpg?format=jpg&crop=1275,956,x113,y0,safe&width=960" alt="Product Image">
+                <div class="product-info">
+                    <div class="product-name">Iphone</div>
+                    <div class="product-price">$100</div>
+                    <div class="product-rating">
+                        ★★★★☆
+                    </div>
+                    <div class="product-manufacturer">Manufacturer Name</div>
+                    <a href="desktop- 28.html" target="_blank" class="view-details-btn">View Details</a>
+                </div>
+            </div>
+            <div class="product-card advertisement-card">
+                <img src="https://markmanson.net/wp-content/themes/mm-main/images/subtle-art-with-pages.png" alt="Product Image">
+                <div class="product-info">
+                    <div class="product-name"> Fiction Book</div>
+                    <div class="product-price">$100</div>
+                    <div class="product-rating">
+                        ★★★★☆
+                    </div>
+                    <div class="product-manufacturer">Manufacturer Name</div>
+                    <a href="desktop- 28.html" target="_blank" class="view-details-btn">View Details</a>
+                </div>
+            </div>
+            <div class="product-card advertisement-card">
+                <img src="https://imageio.forbes.com/specials-images/imageserve/64e74ad803781abed13b0612/Apple--iPhone--iPhone-15--iPhone-15-Pro--iPhone-15-Pro-Max--iPhone-15-release--new/0x0.jpg?format=jpg&crop=1275,956,x113,y0,safe&width=960" alt="Product Image">
+                <div class="product-info">
+                    <div class="product-name">IPhone</div>
+                    <div class="product-price">$100</div>
+                    <div class="product-rating">
+                        ★★★★☆
+                    </div>
+                    <div class="product-manufacturer">Manufacturer Name</div>
+                    <a href="desktop- 28.html" target="_blank" class="view-details-btn">View Details</a>
+                </div>
+            </div>
+            <!-- Add your product cards here -->
+        </div>
+
+        <!-- All Products -->
+        <div class="all-products">
+            <h2>All Products</h2>
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/618M+ksuptL._SL1500_.jpg" alt="Product Image">
+                <div class="product-info">
+                    <div class="product-name">Mac Book</div>
+                    <div class="product-price">$1000</div>
+                    <div class="product-rating">
+                        ★★★★☆
+                    </div>
+                    <div class="product-manufacturer">Manufacturer Name</div>
+                    <a href="desktop- 28.html" target="_blank" class="view-details-btn">View Details</a>
+                </div>
+            </div>
+            <div class="product-card advertisement-card">
+                <img src="https://buymobile.co.nz/cdn/shop/products/866724-0400copy_2048x2048.jpg?v=1681897900" alt="Product Image">
+                <div class="product-info">
+                    <div class="product-name">Headsets</div>
+                    <div class="product-price">$3000</div>
+                    <div class="product-rating">
+                        ★★★★☆
+                    </div>
+                    <div class="product-manufacturer">Mac Book</div>
+                    <a href="desktop- 28.html" target="_blank" class="view-details-btn">View Details</a>
+                </div>
+            </div>
+            </div>
+            <div class="product-card advertisement-card">
+                <img src="https://s3.us-east-2.amazonaws.com/ccp-prd-s3-uploads/2021/11/2/9edc26d3e829ccff9fb830769231d26c7928e488.jpeg" alt="Product Image">
+                <div class="product-info">
+                    <div class="product-name">Headsets</div>
+                    <div class="product-price">$100</div>
+                    <div class="product-rating">
+                        ★★★★☆
+                    </div>
+                    <div class="product-manufacturer">Manufacturer Name</div>
+                    <a href="desktop- 28.html" target="_blank" class="view-details-btn">View Details</a>
+                </div>
+            </div>
+            <div class="product-card advertisement-card">
+                <img src="https://m.media-amazon.com/images/I/618M+ksuptL._SL1500_.jpg" alt="Product Image">
+                <div class="product-info">
+                    <div class="product-name">Headsets</div>
+                    <div class="product-price">$100</div>
+                    <div class="product-rating">
+                        ★★★★☆
+                    </div>
+                    <div class="product-manufacturer">Manufacturer Name</div>
+                    <a href="desktop- 28.html" target="_blank" class="view-details-btn">View Details</a>
+                </div>
+            </div>
+            
+    
+            <!-- Add your product cards here -->
+        </div>
+    </section>
+</div>
+
+    <!-- section 1 starts  -->
+
+
+   <!-- footer section starts  -->
+
+   <section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h1>about</h1>
+            <div class="text">
+                <p>Follow Us on Social-Media !</p>
+            </div>
+            <div class="icon">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="box1">
+            <h1>contact info</h1>
+            <div class="icons">
+                <a href="#"><i class="fas fa-map-marker-alt"></i>HSBC,PUNE </a>
+                <a href="#"><i class="fas fa-phone-alt"></i>9191919191</a>
+                <a href="#"><i class="fas fa-envelope"></i>DADDY@gmail.com</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="credit">Designed By <span>GHOST RC ®</span> | all right reserved</div>
+
+</section>
+
+<!-- footer section ends  -->
+    <script>
+function updateValues() {
+    const minPrice = document.getElementById('min-price');
+    const maxPrice = document.getElementById('max-price');
+    const minPriceLabel = document.getElementById('min-price-label');
+    const maxPriceLabel = document.getElementById('max-price-label');
+    
+    minPriceLabel.textContent = minPrice.value;
+    maxPriceLabel.textContent = maxPrice.value;
+}
+
+</script>
+</body> 
+</html>

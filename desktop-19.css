@@ -1,0 +1,585 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+:root{
+    --main-color: #219653;
+    --black: #000;
+    --light-color: #3078c0;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+::selection{
+    background: var(--main-color);
+    color: #fff;
+}
+
+html{
+    font-size: 60.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background:rgb(from color r g b)
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+    border-radius: 5rem;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+.heading{
+    font-size: 5rem;
+    text-align: center;
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+    color: var(--black);
+    text-transform: uppercase;
+}
+
+.heading span{
+    text-transform: uppercase;
+    color: var(--main-color);
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    background: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--main-color);
+}
+
+.btn:hover{
+    background: var(--main-color);
+    color: #fff;
+    letter-spacing: .1rem;
+}
+
+
+/* ---------------------------------------------- header section starts -------------------------  */
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 3rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: hsl(225deg 5.88% 13.33%);
+    /* box-shadow: 0rem .1rem .5rem rgba(0,0,0,.1); */
+}
+
+.header .logo{
+    display: flex;
+    align-items: center;
+    font-size: 3.0rem;
+    color: hsl(0, 30%, 96%);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+
+.header .logo span{
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.header .navbar a{
+    font-size: 1.9rem;
+    color: #ffffff;
+    margin: 0 1rem;
+}
+
+.header .navbar a:hover{
+    color: var(--main-color);
+}
+
+.header .icons div{
+    font-size: 2.5rem;
+    color: #101010;
+    padding: .5rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    color: #fff;
+}
+
+.header .icons div:hover{
+    transform: rotate(180deg);
+}
+
+#menu-btn{
+    display: none;
+}
+
+.header .icons a{
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    color: #fff;
+    background: var(--main-color);
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: .8rem 2rem;
+    border: none;
+}
+
+.header .icons div:hover{
+    color: var(--main-color);
+}
+
+.header .icons a:hover{
+    color: var(--main-color);
+    background: #fff;
+}
+
+.header.header.active{
+    padding: 2rem 9%;
+    background: rgba(0,0,0,.9);
+}
+
+/* ---------------------------------------------- header section ends -------------------------  */
+
+/* --------------------------------------------- Main Content starts ----------------------  */
+
+.main-content {
+    display: flex;
+    min-height: 70vh; /* Adjust as needed */
+    padding-top: 10rem; /* To ensure content does not overlap with the header */
+    padding-bottom: 4rem; /* Space above footer */
+}
+
+/* Section 1: Filters */
+.filters {
+    flex-basis: 30%;
+    padding: 3.5rem;
+    border-right: 1px solid #ccc;
+    margin-top: 20px
+}
+
+.filter-item {
+    margin-bottom: 1.5rem;
+}
+
+.filter-item label {
+    display: block;
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+    font-size: 16px;
+}
+
+.filter-item input[type="text"],
+.filter-item select,
+.filter-item input[type="date"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.filter-item input[type="range"] {
+    width: 100%;
+}
+
+/* Section 2: Products */
+.products {
+    /* flex-basis: 70%; */
+    padding: 1rem;
+    margin-top: 48px;
+    margin-left: 28px;
+}
+
+.search-bar input[type="text"] {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1.5rem;
+}
+
+.featured-products, .all-products {
+    margin-top: 3rem;
+    box-sizing: border-box;
+    display: flexbox;
+}
+/*  ------------------------------------------------------css for scroller---------------------------------------------------------------- */
+
+.filter-item {
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+.range-slider {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.range-slider input[type="range"] {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.range-slider label {
+    width: 50px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*  ------------------------------------------------------css for scroller---------------------------------------------------------------- */
+.filter-item {
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+.range-slider {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.range-slider input[type="range"] {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.range-slider label {
+    width: 50px;
+    text-align: center;
+}
+
+/* Product cards - you can customize these as per your requirement */
+.product-card {
+    width: 80%; /* 3 cards in a row */
+    margin: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: scale(1.03);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+
+.product-card .product-info {
+    padding: 1rem;
+}
+
+.product-card .product-name {
+    font-weight: bold;
+}
+
+.product-card .product-price {
+    color: var(--main-color);
+    margin-top: 0.5rem;
+}
+
+.product-card .product-rating {
+    margin-top: 0.5rem;
+}
+
+.product-card .product-manufacturer {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 0.5rem;
+}
+
+.product-card .view-details-btn {
+    display: inline-flexbox;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--main-color);
+    color: #fff;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.product-card .view-details-btn:hover {
+    background-color: var(--light-color);
+}
+/* ... Existing CSS ... */
+
+/* Product Cards */
+.product-card {
+    display: inline-block;
+    width: 30%; /* 3 cards in a row with some margin */
+    margin: 1rem;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 60%; /* Image height */
+    object-fit: cover; /* This ensures the image covers the container without distortion */
+}
+
+.product-card .product-info {
+    padding: 1rem;
+    background-color: #f8f8f8;
+}
+
+.product-card .product-name {
+    float: left; /* Asset name on the left */
+    width: 70%;
+}
+
+.product-card .product-price {
+    float: right; /* Price on the right */
+    width: 30%;
+    text-align: right;
+}
+
+.product-card .product-rating {
+    clear: both; /* Clearing floats */
+    margin-top: 0.5rem;
+    color: var(--main-color);
+}
+
+.product-card .product-manufacturer {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.product-card .view-details-btn {
+    display: block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    background-color: var(--main-color);
+    color: #fff;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.product-card .view-details-btn:hover {
+    background-color: var(--light-color);
+}
+
+/* Specific styling for advertisement cards */
+/* .advertisement-card {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+} */
+
+/* --------------------------------------------- Main Content ends ----------------------  */
+
+/* --------------------------------------------- footer section starts ----------------------  */
+
+.footer{
+    background: #222;
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(35rem , 1fr));
+    gap: 1.5rem;
+}
+
+.footer .box-container .box{
+    padding: 2rem;
+}
+
+.footer .box-container .box h1{
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: 600;
+    padding-bottom: 1rem;
+    
+}
+
+.footer .box-container .box .text{
+    color: #eee;
+    font-size: 1.3rem;
+    font-weight: normal;
+    line-height: 1.8;
+    padding-bottom: 1rem;
+}
+
+.footer .box-container .box .icon{
+    padding: 1rem 0;
+}
+
+.footer .box-container .box .icon a i{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    background: var(--main-color);
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 0 .5rem;
+    color: #fff;
+}
+
+.footer .box-container .box .icon a i:hover{
+    color: var(--main-color);
+    background: none;
+    border: .2rem solid var(--main-color);
+}
+
+.footer .box-container .box .icons a{
+    display: block;
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.footer .box-container .box .icons a i{
+    margin-right: .3frem;
+    color: var(--main-color);
+}
+
+.footer .box-container .box .icons a:hover i{
+    padding-right: 2rem;
+    color: #fff;
+}
+
+.footer .box-container .box .icons a:hover{
+    color: var(--main-color);
+}
+
+.footer .credit{
+    padding: 3rem 0;
+    text-align: center;
+    border-top: .1rem solid #808080;
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #eee;
+    
+}
+
+.footer .credit span{
+    color: var(--main-color);
+}
+
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(35rem , 1fr));
+    gap: 1.5rem;
+}
+
+.footer .box-container .box1{
+    padding: 2rem;
+    margin-left: 60%;   /*margin for the footer contact info*/
+}
+
+.footer .box-container .box1 h1{
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: 600;
+    padding-bottom: 1rem;
+    
+}
+
+.footer .box-container .box1 .text{
+    color: #eee;
+    font-size: 1.3rem;
+    font-weight: normal;
+    line-height: 1.8;
+    padding-bottom: 1rem;
+}
+
+.footer .box-container .box1 .icon{
+    padding: 1rem 0;
+}
+
+.footer .box-container .box1 .icon a i{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    background: var(--main-color);
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 0 .5rem;
+    color: #fff;
+}
+
+.footer .box-container .box1 .icon a i:hover{
+    color: var(--main-color);
+    background: none;
+    border: .2rem solid var(--main-color);
+}
+
+.footer .box-container .box1 .icons a{
+    display: block;
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.footer .box-container .box1 .icons a i{
+    margin-right: .5rem;
+    color: var(--main-color);
+}
+
+.footer .box-container .box1 .icons a:hover i{
+    padding-right: 2rem;
+    color: #fff;
+}
+
+.footer .box-container .box1 .icons a:hover{
+    color: var(--main-color);
+}
+
+.footer .credit{
+    padding: 3rem 0;
+    text-align: center;
+    border-top: .1rem solid #808080;
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #eee;
+    
+}
+
+.footer .credit span{
+    color: var(--main-color);
+}
+/* --------------------------------------------- footer section ends ----------------------  */
