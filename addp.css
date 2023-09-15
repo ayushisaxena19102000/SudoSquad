@@ -1,0 +1,653 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+:root{
+    --main-color: #219653;
+    --black: #000;
+    --light-color: #3078c0;
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+::selection{
+    background: var(--main-color);
+    color: #fff;
+}
+
+html{
+    font-size: 60.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+}
+
+html::-webkit-scrollbar{
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track{
+    background:rgb(from color r g b)
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+    border-radius: 5rem;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+.heading{
+    font-size: 5rem;
+    text-align: center;
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+    color: var(--black);
+    text-transform: uppercase;
+}
+
+.heading span{
+    text-transform: uppercase;
+    color: var(--main-color);
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 3rem;
+    font-size: 1.7rem;
+    background: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--main-color);
+}
+
+.btn:hover{
+    background: var(--main-color);
+    color: #fff;
+    letter-spacing: .1rem;
+}
+
+
+/* ---------------------------------------------- header section starts -------------------------  */
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 3rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: hsl(225deg 5.88% 13.33%);
+    /* box-shadow: 0rem .1rem .5rem rgba(0,0,0,.1); */
+}
+
+.header .logo{
+    display: flex;
+    align-items: center;
+    font-size: 3.0rem;
+    color: hsl(0, 30%, 96%);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+
+.header .logo span{
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.header .navbar a{
+    font-size: 1.9rem;
+    color: #ffffff;
+    margin: 0 1rem;
+}
+
+.header .navbar a:hover{
+    color: var(--main-color);
+}
+
+.header .icons div{
+    font-size: 2.5rem;
+    color: #101010;
+    padding: .5rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    color: #fff;
+}
+
+.header .icons div:hover{
+    transform: rotate(180deg);
+}
+
+#menu-btn{
+    display: none;
+}
+
+.header .icons a{
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    color: #fff;
+    background: var(--main-color);
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: .8rem 2rem;
+    border: none;
+}
+
+.header .icons div:hover{
+    color: var(--main-color);
+}
+
+.header .icons a:hover{
+    color: var(--main-color);
+    background: #fff;
+}
+
+.header.header.active{
+    padding: 2rem 9%;
+    background: rgba(0,0,0,.9);
+}
+
+
+/* --------- details ---------- */
+
+.details p{
+    color: rgb(79, 75, 75);
+}
+
+/* --------- Title ---------- */
+
+.title{
+    background-color: whitesmoke;
+    margin-left: calc(25%);
+    margin-top: 20px;
+    margin-right: 80px;
+    margin-bottom: 0;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.06);
+    width: 53%;
+}
+
+.title h3{
+    font-weight: 300;
+    color: rgb(66, 65, 65);
+    padding: 10px 30px;
+    margin: 0;
+    text-align: center;
+    font-size: 25px;
+    background-color: rgb(222, 221, 221);
+}
+
+/* --------- Upload Image ---------- */
+
+.upload_image{
+    margin: 30px 80px 30px 80px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.04);
+}
+
+.upload_image {
+    
+    height: 75% ;
+    padding: 30px;
+    background-color: #f7fcf3;
+    text-align: center;
+    border-radius: 20px;
+    border: 1px dashed; 
+    margin-left: calc(26%);
+    width: 50%;
+}
+
+.upload_image .img img{
+    width: 50px;
+    padding: 50px 0 0 0 ;
+}
+
+.upload_image .img h4{
+    font-size: 20px;
+    font-weight: 300;
+    color: rgb(92, 89, 89);
+}
+
+.upload_image .img p{
+    font-size: 15px;
+    color: rgb(99, 97, 97);
+}
+
+.upload_image .img h1{
+    font-weight: 400;
+    color: green;
+}
+
+/* --------- Add btn ---------- */
+
+.add{
+    padding-right: 40px;
+    /* display: flex;
+    justify-content: right; */
+    margin-left: calc(67%);
+}
+.add .add-btn{
+    background-color: green;
+    color: white;
+    border: 1px solid green;
+    font-size: 18px;
+    font-weight: 200;
+    padding: 5px 35px;
+    border-radius: 2px;
+}
+
+.add .add-btn a{
+    text-decoration: none;
+    color: white;
+}
+
+/* --------- Footer ---------- */
+
+
+.credits{
+    background-color: green;
+    color: white;
+    margin: 0%;
+    padding-top: 0;
+}
+.credits p{
+    font-size: 15px;
+    font-weight: 100;
+    padding-left: calc(100% - 450px);
+    padding-top: 0;
+}
+
+/* --------- Form Availability ---------- */
+
+.avl-form{
+    padding: 20px;
+    /* margin: 0px 390px 40px 90px; */
+    margin-top: 5%;
+    margin-right: 390px;
+    padding-bottom: 40px;
+    margin-left: calc(25%);
+    width: 53.2%;
+    background-color: rgb(59 133 64);
+}
+
+.lable-1{
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.date-1{
+    margin: 20px 0;
+}
+
+#date-1{
+    width: calc(100% - 50px);
+    padding: 5px 10px;
+    border:1px solid rgb(176, 168, 168) ;
+    border-radius: 3px;
+    font-size: 16px;
+    color: rgb(136, 131, 131);
+}
+
+.date-2{
+    margin: 0 0 20px 0;
+}
+
+#date-2{
+    padding-left: 58%;
+    color:black;
+}
+
+.date-3{
+    margin: 0 0 30px 0;
+}
+
+#date-3{
+    padding-left: 20%;
+}
+
+.h4{
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.lable-2{
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.form-hr{
+    width: calc(100% - 50px);
+    padding: 5px 10px;
+    border:1px solid rgb(176, 168, 168) ;
+    border-radius: 3px;
+    font-size: 16px;
+    color: rgb(136, 131, 131);
+    margin-bottom: 5px;
+    margin-top: 20px;
+}
+
+.form-day{
+    width: calc(100% - 50px);
+    padding: 5px 10px;
+    border:1px solid rgb(176, 168, 168) ;
+    border-radius: 3px;
+    font-size: 16px;
+    color: rgb(136, 131, 131);
+}
+
+#date-1::-webkit-calendar-picker-indicator{
+    opacity: 0;
+}
+
+#date-2:required:invalid::-webkit-datetime-edit {
+    color: transparent;
+}
+
+#date-2{
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+
+#date-3:required:invalid::-webkit-datetime-edit {
+    color: transparent;
+}
+
+#date-3{
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+
+
+#date-2::-webkit-calendar-picker-indicator{
+    color: green;
+}
+
+.h4-add{
+    padding-left: 87%;
+    color: rgb(59 133 64);
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.avl-form{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.section-1{
+    width: 100%;
+}
+
+.section-2{
+    width: 100%;
+}
+
+.add-btn-1{
+    background-color: green;
+    color: white;
+    border: 1px solid green;
+    font-size: 18px;
+    font-weight: 200;
+
+    padding: 5px 80px;
+    border-radius: 2px;
+}
+.add-1{
+    padding-left: 40%;
+    margin-left: 25%;
+    background-color: white;
+    width: 14.5%;
+    padding-bottom: 20px;
+    padding-right: 20px;
+}
+.add-2{
+    padding-left: 40%;
+    margin-left: 25%;
+    background-color: rgb(222, 221, 221);
+    width: 14.6%;
+    padding-bottom: 20px;
+    padding-right: 20px;
+}
+.add-btn-1 a{
+    text-decoration: none;
+    color: white;
+}
+
+.menubar li a.active{
+    color: #008000;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.det-form{
+    width: 56%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-left: calc(25%);
+    margin-right: 300px;
+    background-color: rgb(222, 221, 221);
+}
+.det-form label{
+    font-size: 18px;
+    margin: 20px;
+}
+
+.equ-name{
+    margin: 20px;
+}
+
+.manu-name{
+    margin: 20px;
+}
+
+.equ-type{
+    margin: 20px;
+}
+
+.location{
+    margin: 20px;
+}
+
+.des{
+    margin: 20px;
+}
+
+.des-1{
+    height: 150px;
+}
+
+.des-1::placeholder{
+    vertical-align: text-top;
+}
+/* --------------------------------------------- footer section starts ----------------------  */
+
+.footer{
+    background: #222;
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(35rem , 1fr));
+    gap: 1.5rem;
+}
+
+.footer .box-container .box{
+    padding: 2rem;
+}
+
+.footer .box-container .box h1{
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: 600;
+    padding-bottom: 1rem;
+    
+}
+
+.footer .box-container .box .text{
+    color: #eee;
+    font-size: 1.3rem;
+    font-weight: normal;
+    line-height: 1.8;
+    padding-bottom: 1rem;
+}
+
+.footer .box-container .box .icon{
+    padding: 1rem 0;
+}
+
+.footer .box-container .box .icon a i{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    background: var(--main-color);
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 0 .5rem;
+    color: #fff;
+}
+
+.footer .box-container .box .icon a i:hover{
+    color: var(--main-color);
+    background: none;
+    border: .2rem solid var(--main-color);
+}
+
+.footer .box-container .box .icons a{
+    display: block;
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.footer .box-container .box .icons a i{
+    margin-right: .3frem;
+    color: var(--main-color);
+}
+
+.footer .box-container .box .icons a:hover i{
+    padding-right: 2rem;
+    color: #fff;
+}
+
+.footer .box-container .box .icons a:hover{
+    color: var(--main-color);
+}
+
+.footer .credit{
+    padding: 3rem 0;
+    text-align: center;
+    border-top: .1rem solid #808080;
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #eee;
+    
+}
+
+.footer .credit span{
+    color: var(--main-color);
+}
+
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(35rem , 1fr));
+    gap: 1.5rem;
+}
+
+.footer .box-container .box1{
+    padding: 2rem;
+    margin-left: 60%;   /*margin for the footer contact info*/
+}
+
+.footer .box-container .box1 h1{
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: 600;
+    padding-bottom: 1rem;
+    
+}
+
+.footer .box-container .box1 .text{
+    color: #eee;
+    font-size: 1.3rem;
+    font-weight: normal;
+    line-height: 1.8;
+    padding-bottom: 1rem;
+}
+
+.footer .box-container .box1 .icon{
+    padding: 1rem 0;
+}
+
+.footer .box-container .box1 .icon a i{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    background: var(--main-color);
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 0 .5rem;
+    color: #fff;
+}
+
+.footer .box-container .box1 .icon a i:hover{
+    color: var(--main-color);
+    background: none;
+    border: .2rem solid var(--main-color);
+}
+
+.footer .box-container .box1 .icons a{
+    display: block;
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.footer .box-container .box1 .icons a i{
+    margin-right: .5rem;
+    color: var(--main-color);
+}
+
+.footer .box-container .box1 .icons a:hover i{
+    padding-right: 2rem;
+    color: #fff;
+}
+
+.footer .box-container .box1 .icons a:hover{
+    color: var(--main-color);
+}
+
+.footer .credit{
+    padding: 3rem 0;
+    text-align: center;
+    border-top: .1rem solid #808080;
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #eee;
+    
+}
+
+.footer .credit span{
+    color: var(--main-color);
+}
+/* --------------------------------------------- footer section ends ----------------------  */

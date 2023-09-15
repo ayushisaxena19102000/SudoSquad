@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<link rel="shortcut icon" type="x-icon" href="images/logo.png">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="">
+	
+		<!-- swiper CSS cdn link  -->
+		<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+	
+		<!-- custom CSS file link  -->
+		<link rel="stylesheet" href="admin.css">
+	
+		<!-- Font awesome cdn link  -->
+		<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	
+	
+		<title>Admin Portal</title>
+</head>
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar"style="position: fixed; z-index:0;">
+		<a href="#" class="brand">
+			<i class='bx bxs-smile'></i>
+			<span class="text">ADMIN PANEL</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="#">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text"style="color: black">Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<a href="adminbookings.html">
+					<i class='bx bxs-group' ></i>
+					<span class="text">Pending Requests</span>
+				</a>
+			</li>
+			<li>
+				<a href="owner_screen.html">
+					<i class='bx bxs-shopping-bag-alt' ></i>
+					<span class="text">Manage Assets</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Manage User</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-message-dots' ></i>
+					<span class="text">Settings</span>
+				</a>
+			</li>
+			
+			<li>
+				<a href="#">
+					<i class='bx bxs-group' ></i>
+					<span class="text">FAQ</span>
+				</a>
+			</li>
+			<li>
+				<a href="signup.html">
+					<i class='bx bxs-group' ></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		<!-- </ul>
+		<ul class="side-menu">
+			<li>
+				<a href="#">
+					<i class='bx bxs-cog' ></i>
+					<span class="text">FAQ</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul> -->
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="right">
+					<h1>Dashboard</h1>
+					<ul class="breadcrumb">
+						<!-- <li>
+							<a href="#">Home</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="#">Dashboard</a>
+						</li> -->
+					</ul>
+				</div>
+				<a href="#" class="btn-download icons" style="border-radius: 2px;">
+					<i class='bx bxs-cloud-download' ></i>
+					<span class="text btn " style="padding: 12px;">Import Users</span>
+				</a>
+			</div>
+
+			<ul class="box-info">
+				<li>
+					<i class='bx bxs-calendar-check' ></i>
+					<span class="text">
+						<h3>1020</h3>
+						<p>New Order</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-group' ></i>
+					<span class="text">
+						<h3>2834</h3>
+						<p>Active Borrowers</p>
+					</span>
+				</li>
+				<li>
+					<i class='bx bxs-dollar-circle' ></i>
+					<span class="text">
+						<h3>$2543</h3>
+						<p>Total Borrowing</p>
+					</span>
+				</li>
+			</ul>
+
+
+			<div class="table-data">
+				<div class="order">
+					<div class="head">
+						<h3>Recent Orders</h3>
+						<i class='bx bx-search' ></i>
+						<i class='bx bx-filter' ></i>
+					</div>
+					<table>
+						<thead>
+							<tr>
+								<th>User Name</th>
+								<th>Date Order</th>
+								<th>Status</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<img src="imgs/wings.png">
+									<p>RC</p>
+								</td>
+								<td>13-09-2023</td>
+								<td><span class="status completed">Completed</span></td>
+							</tr>
+							<tr>
+								<td>
+									<img src="imgs/wings.png">
+									<p>BOSS</p>
+								</td>
+								<td>13-09-2023</td>
+								<td><span class="status pending">Pending</span></td>
+							</tr>
+							<tr>
+								<td>
+									<img src="imgs/wings.png">
+									<p>GHOST</p>
+								</td>
+								<td>13-09-2023</td>
+								<td><span class="status process">Blocked User</span></td>
+							</tr>
+							<tr>
+								<td>
+									<img src="imgs/wings.png">
+									<p>DADDY</p>
+								</td>
+								<td>13-09-2023</td>
+								<td><span class="status pending">Pending</span></td>
+							</tr>
+							<tr>
+								<td>
+									<img src="imgs/wings.png">
+									<p>WINGS</p>
+								</td>
+								<td>13-09-2023</td>
+								<td><span class="status completed">Completed</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				
+		</main> 
+		<!-- MAIN -->
+
+
+	</section>
+	<!-- CONTENT -->
+	  <!-- footer section starts  -->
+
+	  <section class="footer"style="position: relative;  z-index: 1">
+
+        <div class="box-container">
+
+            <div class="box">
+                <h1>about</h1>
+                <div class="text">
+                    <p>Follow Us on Social-Media !</p>
+                </div>
+                <div class="icon">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="box1">
+                <h1>contact info</h1>
+                <div class="icons">
+                    <a href="#"><i class="fas fa-map-marker-alt"></i>HSBC,PUNE </a>
+                    <a href="#"><i class="fas fa-phone-alt"></i>9191919191</a>
+                    <a href="#"><i class="fas fa-envelope"></i>DADDY@gmail.com</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="credit">Designed By <span>GHOST RC ®</span> | all right reserved</div>
+
+    </section>
+
+    <!-- footer section ends  -->
+
+	<script src="script.js"></script>
+</body>
+</html>

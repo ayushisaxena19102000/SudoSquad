@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="images/logo.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BORROW IT</title>
+    <link rel="icon" href="">
+
+    <!-- swiper CSS cdn link  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+
+    <!-- custom CSS file link  -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font awesome cdn link  -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+</head>
+<body>
+    
+    <!-- header section starts  -->
+    <style>
+            @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+    :root{
+        --main-color: #219653;
+        --black: #000;
+        --light-color: #3078c0;
+    }
+
+    *{
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        border: none;
+        text-transform: capitalize;
+        transition: all .2s linear;
+    }
+
+    ::selection{
+        background: var(--main-color);
+        color: #fff;
+    }
+
+    html{
+        font-size: 60.5%;
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+        scroll-padding-top: 7rem;
+    }
+
+    html::-webkit-scrollbar{
+        width: 1rem;
+    }
+
+    html::-webkit-scrollbar-track{
+        background:rgb(from color r g b)
+    }
+
+    html::-webkit-scrollbar-thumb{
+        background: var(--main-color);
+        border-radius: 5rem;
+    }
+
+    section{
+        padding: 2rem 9%;
+    }
+
+    .heading{
+        font-size: 5rem;
+        text-align: center;
+        padding-top: 6rem;
+        padding-bottom: 2rem;
+        color: var(--black);
+        text-transform: uppercase;
+    }
+
+    .heading span{
+        text-transform: uppercase;
+        color: var(--main-color);
+    }
+
+    .btn{
+        margin-top: 1rem;
+        display: inline-block;
+        padding: .8rem 3rem;
+        font-size: 1.7rem;
+        background: #fff;
+        font-weight: 500;
+        cursor: pointer;
+        color: var(--main-color);
+    }
+
+    .btn:hover{
+        background: var(--main-color);
+        color: #fff;
+        letter-spacing: .1rem;
+    }
+
+        /* body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        } */
+
+        /* #navbar {
+            background-color: white;
+            text-align: center;
+            padding: 10px;
+            margin: 0 20px;
+        }
+
+        #navbar a {
+            color: green;
+            text-decoration: none;
+            margin: 0 20px;
+        } */
+
+        #container {
+            padding: 20px;
+            display: flex;
+            flex-direction: row; /* Arrange content side by side */
+            justify-content: flex-start; /* Align content to the left */
+            align-items: flex-start; /* Align content to the top */
+            margin-top: 20px;
+        }
+
+        #filters {
+            background-color: white;
+            padding: 20px;
+            width: 200px;
+            margin-right: 20px; /* Add margin to create space */
+            margin-top: 6%;
+        }
+
+        .category-button {
+            display: block;
+            width: 100%;
+            padding: 10px 30px 10px 10px;
+            margin: 10px 0;
+            text-align: left;
+            color: black; /* Set text color to white */
+            border: none;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .category-button::before {
+            content: "▶"; /* Proper arrow character */
+            color: white; /* Set arrow color to white */
+            position: absolute;
+            right: 10px;
+        }
+
+        .category-button:hover {
+            background-color: rgb(0, 166, 255); /* Change background color on hover */
+        }
+
+        .category-button.pending{
+            background-color: #ffc107; /* Yellow for Pending */
+        }
+
+        .category-button.accepted {
+            background-color: #28a745; /* Green for Accepted */
+        }
+
+        .category-button.rejected {
+            background-color: #dc3545; /* Red for Rejected */
+        }
+
+        #booking-history {
+            background-color: white;
+            padding: 20px;
+            width: 60%; /* Adjust the width as needed */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-top:6% ;
+        }
+
+        #booking-history h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        #booking-history table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        #booking-history th,
+        #booking-history td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+            font-size: 15px;
+
+        }
+
+        #booking-history th {
+            background-color: #f2f2f2;
+        }
+
+
+        /* Updated user info box */
+        #user-info-box {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: transparent; /* Remove background color */
+            color: black;
+        }
+        #search-bar {
+            position: absolute;
+            top: 10px;
+             right: 35px;
+            background-color: white;
+             padding: 10px;
+             width: 322px;
+             margin-top: 7%;
+        }
+
+        #search-bar input[type="text"] {
+            width: 100%;
+            padding: 6px;
+            margin-bottom: 6px;
+            border: 1px solid #ddd;
+        }
+
+        #search-button {
+            width: 100%;
+            padding: 6px;
+            background-color: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #search-results {
+            background-color: white;
+            padding: 20px;
+            width: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-left: 22%;
+        }
+
+        /* Price slider styles */
+        #price-slider-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        #price-slider {
+            width: 120px;
+        }
+
+        #price-slider-label {
+            margin-top: 10px;
+        }
+
+        /* Updated footer styles */
+/* --------------------------------------------- footer section starts ----------------------  */
+
+.footer{
+    background: #222;
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(35rem , 1fr));
+    gap: 1.5rem;
+
+}
+
+.footer .box-container .box{
+    padding: 0.5rem;
+    
+}
+
+.footer .box-container .box h1{
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: 600;
+    padding-bottom: 1rem;
+    
+}
+
+.footer .box-container .box .text{
+    color: #eee;
+    font-size: 1.3rem;
+    font-weight: normal;
+    line-height: 1.8;
+    padding-bottom: 1rem;
+}
+
+.footer .box-container .box .icon{
+    padding: 1rem 0;
+}
+
+.footer .box-container .box .icon a i{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    background: var(--main-color);
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 0 .5rem;
+    color: #fff;
+}
+
+.footer .box-container .box .icon a i:hover{
+    color: var(--main-color);
+    background: none;
+    border: .2rem solid var(--main-color);
+}
+
+.footer .box-container .box .icons a{
+    display: block;
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.footer .box-container .box .icons a i{
+    margin-right: .3frem;
+    color: var(--main-color);
+}
+
+.footer .box-container .box .icons a:hover i{
+    padding-right: 2rem;
+    color: #fff;
+}
+
+.footer .box-container .box .icons a:hover{
+    color: var(--main-color);
+}
+
+.footer .credit{
+    padding: 3rem 0;
+    text-align: center;
+    border-top: .1rem solid #808080;
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #eee;
+    
+}
+
+.footer .credit span{
+    color: var(--main-color);
+}
+
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(35rem , 1fr));
+    gap: 1.5rem;
+}
+
+.footer .box-container .box1{
+    padding: 2rem;
+    margin-left: 60%;   /*margin for the footer contact info*/
+}
+
+.footer .box-container .box1 h1{
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: 600;
+    padding-bottom: 1rem;
+    
+}
+
+.footer .box-container .box1 .text{
+    color: #eee;
+    font-size: 1.3rem;
+    font-weight: normal;
+    line-height: 1.8;
+    padding-bottom: 1rem;
+}
+
+.footer .box-container .box1 .icon{
+    padding: 1rem 0;
+}
+
+.footer .box-container .box1 .icon a i{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    background: var(--main-color);
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 0 .5rem;
+    color: #fff;
+}
+
+.footer .box-container .box1 .icon a i:hover{
+    color: var(--main-color);
+    background: none;
+    border: .2rem solid var(--main-color);
+}
+
+.footer .box-container .box1 .icons a{
+    display: block;
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.footer .box-container .box1 .icons a i{
+    margin-right: .5rem;
+    color: var(--main-color);
+}
+
+.footer .box-container .box1 .icons a:hover i{
+    padding-right: 2rem;
+    color: #fff;
+}
+
+.footer .box-container .box1 .icons a:hover{
+    color: var(--main-color);
+}
+
+.footer .credit{
+    padding: 3rem 0;
+    text-align: center;
+    border-top: .1rem solid #808080;
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #eee;
+    
+}
+
+.footer .credit span{
+    color: var(--main-color);
+}
+/* --------------------------------------------- footer section ends ----------------------  */
+
+/* Updated header styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 2.5rem 5%; /* Reduce top and bottom padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: black;
+    box-shadow: 0rem 0.1rem 0.5rem rgba(0, 0, 0, 0.1); /* Reduce box shadow */
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem; /* Reduce font size for logo */
+    color: hsl(0, 30%, 96%);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem; /* Reduce letter spacing */
+}
+
+.header .logo span {
+    color: var(--main-color);
+    text-transform: uppercase;
+}
+
+.header .navbar a {
+    font-size: 1.5rem; /* Reduce font size for navigation links */
+    color: #ffffff;
+    margin: 0 0.5rem; /* Reduce margin for links */
+}
+
+.header .icons div {
+    font-size: 2rem; /* Reduce icon size */
+    color: #101010;
+    padding: 0.3rem; /* Reduce padding */
+    cursor: pointer;
+    margin-left: 0.5rem; /* Reduce margin */
+    color: #fff;
+}
+
+#menu-btn {
+    display: none;
+}
+
+.header .icons a {
+    font-size: 1.2rem; /* Reduce font size for button text */
+    letter-spacing: 0.1rem;
+    color: #fff;
+    background: var(--main-color);
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 0.6rem 1.5rem; /* Reduce padding */
+    border: none;
+}
+
+.header .icons div:hover {
+    color: var(--main-color);
+}
+
+.header .icons a:hover {
+    color: var(--main-color);
+    background: #fff;
+}
+
+.header.header.active {
+    padding: 0.8rem 5%; /* Reduce padding for active header */
+    background: rgba(0, 0, 0, 0.9);
+}
+
+#side-bar{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reject-button,
+.reject-button:hover {
+    background-color: #dc3545; /* Red for Reject button */
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Style for the "Accept" button */
+.accept-button,
+.accept-button:hover {
+    background-color: #28a745; /* Green for Accept button */
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Style for the action column (centering buttons) */
+#booking-history td:nth-child(7) {
+    text-align: center;
+}
+
+/* Style for the status details cell with background colors */
+#booking-history td.status-details {
+    padding: 8px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Style for "Accepted" status */
+#booking-history td.accepted {
+    background-color: #28a745;
+    color: black;
+}
+
+/* Style for "Rejected" status */
+#booking-history td.rejected {
+    background-color: #dc3545;
+    color:black;
+
+}
+#booking-history td.pending {
+    background-color: #ffc107;
+    color: black;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    
+
+    <!-- User info box -->
+    <div id="user-info-box">
+        <!-- Empty user info box -->
+    </div>
+
+    <!-- header section starts  -->
+
+    <header class="header">
+
+        <a href="#" class="logo">BORROW <span>IT</span></a>
+
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="desktop-19.html">dashboard</a>
+            <a href="owner_screen.html">add product</a>
+            <a href="#">help</a>
+            <!-- <a href="#">contact us</a> -->
+        </nav>
+
+
+        <div class="icons">
+            <a href="signup.html" class="btn">Logout GRANGHEA </a>
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </div>
+
+    </header>
+
+    <!-- header section ends  -->
+
+
+    <div id="container">
+    <div id="side-bar">
+        <div id="filters">
+            <h3>Product Filters</h3>
+            <button class="category-button" data-filter="all">All</button>
+            <button class="category-button pending" data-filter="pending">Pending</button>
+            <button class="category-button accepted" data-filter="accepted">Accepted</button>
+            <button class="category-button rejected" data-filter="rejected">Rejected</button>
+        </div> 
+        <div id="price-slider-container">
+            <label for="price-slider" id="price-slider-label">Price: $1000</label>
+            <input type="range" id="price-slider" min="0" max="1000" step="10" value="1000">
+        </div>
+    </div>
+        
+        <div id="booking-history">
+            <h2>Booking History</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Booking Date</th>
+                        <th>Equipment</th>
+                        <th>Return Date</th>
+                        <th>Price</th>
+                        <th>Status Details</th>
+                        
+                    </tr>
+                </thead>
+                <tbody id="booking-history-body">
+                    <tr>
+                        <td>2023-09-10</td>
+                        <td>Tablet</td>
+                        <td>Jane Smith</td>
+                        <td>300</td>
+                        <td class="pending">Pending</td>
+                    </tr>
+                    <tr>
+                        <td>2023-09-11</td>
+                        <td>Monitor</td>
+                        <td>Bob Johnson</td>
+                        <td>$200</td>
+                        <td class="accepted">Accepted</td>
+                    </tr>
+                    <tr>
+                        <td>2023-09-12</td>
+                        <td>Printer</td>
+                        <td>Alice Brown</td>
+                        <td>$100</td>
+                        <td class="rejected">Rejected</td>
+                    </tr>
+                    <tr>
+                        <td>2023-09-14</td>
+                        <td>Mouse</td>
+                        <td>Lisa Davis</td>
+                        <td>$10</td>
+                        <td class="accepted">Accepted</td>
+                    </tr>
+                    <tr>
+                        <td>2023-09-16</td>
+                        <td>Camera</td>
+                        <td>Sarah White</td>
+                        <td>$400</td>
+                        <td class="accepted">Accepted</td>
+                    </tr>
+                    <tbody id="booking-history-body">
+                        <!-- Rows will be generated dynamically with unique IDs -->
+                    </tbody>
+                </tbody>
+            </table>
+        </div>
+    
+        <div id="search-bar">
+            <h3>Search Pending Items</h3>
+            <input type="text" id="search-input" placeholder="Search by date, username, or item name">
+            <button id="search-button">Search</button>
+        </div>
+    </div>
+
+    <div id="search-results">
+        <!-- Search results will appear here -->
+    </div>
+
+  <!-- footer section starts  -->
+
+  <section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h1>about</h1>
+            <div class="text">
+                <p>Follow Us on Social-Media !</p>
+            </div>
+            <div class="icon">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="box1">
+            <h1>contact info</h1>
+            <div class="icons">
+                <a href="#"><i class="fas fa-map-marker-alt"></i>HSBC,PUNE </a>
+                <a href="#"><i class="fas fa-phone-alt"></i>9191919191</a>
+                <a href="#"><i class="fas fa-envelope"></i>DADDY@gmail.com</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="credit">Designed By <span>GHOST RC ®</span> | all right reserved</div>
+
+</section>
+
+<!-- footer section ends  -->
+    <script>
+        const filterButtons = document.querySelectorAll('.category-button');
+const bookingHistoryBody = document.getElementById('booking-history-body');
+const searchInput = document.getElementById('search-input');
+const searchButton = document.getElementById('search-button');
+const searchResults = document.getElementById('search-results');
+const priceSlider = document.getElementById('price-slider');
+const priceSliderLabel = document.getElementById('price-slider-label');
+
+// Sample booking history data (replace with your actual data)
+const bookingHistoryData = [
+    { date: '2023-09-10', equipment: 'Tablet', name: '2024-09-10', price: '$300', status: 'Pending' },
+    { date: '2023-09-11', equipment: 'Monitor', name: '2024-09-10', price: '$200', status: 'Accepted' },
+    { date: '2023-09-12', equipment: 'Printer', name: '2024-09-10', price: '$100', status: 'Rejected' },
+    { date: '2023-09-14', equipment: 'Mouse', name: '2024-09-10', price: '$10', status: 'Accepted' },
+    { date: '2023-09-16', equipment: 'Camera', name: '2024-09-10', price: '$400', status: 'Accepted' },
+    { date: '2023-09-17', equipment: 'Smartphone', name: '2024-09-10', price: '$600', status: 'Pending' },
+    { date: '2023-09-19', equipment: 'Printer', name: '2024-09-10', price: '$150', status: 'Rejected' },
+    { date: '2023-09-20', equipment: 'Mouse', name: '2024-09-10', price: '$15', status: 'Accepted' },
+];
+
+// Function to update the booking history based on the selected filter and max price
+function updateBookingHistory(filter, maxPrice) {
+    const filteredData = bookingHistoryData.filter(entry => {
+        const entryPrice = parseFloat(entry.price.substr(1));
+        return (filter === 'all' || entry.status.toLowerCase() === filter) && entryPrice <= maxPrice;
+    });
+
+    const rows = filteredData.map(entry => `
+        <tr>
+            <td>${entry.date}</td>
+            <td>${entry.equipment}</td>
+            <td>${entry.name}</td>
+            <td>${entry.price}</td>
+            <td class="${entry.status.toLowerCase()}">${entry.status}</td>
+        </tr>
+    `).join('');
+
+    bookingHistoryBody.innerHTML = rows;
+}
+
+function performSearch(query) {
+    const searchTerm = query.toLowerCase();
+    const results = bookingHistoryData.filter(entry =>
+        entry.status.toLowerCase() === 'pending' && (entry.date.includes(searchTerm) || entry.name.toLowerCase().includes(searchTerm) || entry.equipment.toLowerCase().includes(searchTerm))
+    );
+
+    const resultRows = results.map(entry => `
+        <tr>
+            <td>${entry.date}</td>
+            <td>${entry.equipment}</td>
+            <td>${entry.name}</td>
+            <td>${entry.price}</td>
+            <td class="${entry.status.toLowerCase()}">${entry.status}</td>
+        </tr>
+    `).join('');
+
+    searchResults.innerHTML = `
+        <h2>Search Results</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Date</th>
+                    <th>Equipment</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Status Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                ${resultRows}
+            </tbody>
+        </table>
+    `;
+}
+
+// Add click event listeners to filter buttons
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const filter = button.getAttribute('data-filter');
+        const maxPrice = parseFloat(priceSlider.value);
+        updateBookingHistory(filter, maxPrice);
+        // Deselect all buttons and select the clicked one
+        filterButtons.forEach(btn => btn.classList.remove('selected'));
+        button.classList.add('selected');
+    });
+});
+
+searchButton.addEventListener('click', () => {
+    const searchQuery = searchInput.value.trim();
+    performSearch(searchQuery);
+});
+
+// Initialize with "All" filter and max price of 1000
+updateBookingHistory('all', 1000);
+
+// Add input event listener to price slider
+priceSlider.addEventListener('input', () => {
+    const maxPrice = parseFloat(priceSlider.value);
+    priceSliderLabel.textContent = `Price: $${maxPrice}`;
+    const selectedFilterButton = document.querySelector('.category-button.selected');
+    const filter = selectedFilterButton ? selectedFilterButton.getAttribute('data-filter') : 'all';
+    updateBookingHistory(filter, maxPrice);
+});
+
+function generateUniqueID() {
+            const id = Math.floor(Math.random() * 100) + 1; // Generates a random number between 1 and 100
+            return 'ID' + id;
+        }
+
+        // Function to update the booking history with unique IDs
+        function updateBookingHistory(filter, maxPrice) {
+            const filteredData = bookingHistoryData.filter(entry => {
+                const entryPrice = parseFloat(entry.price.substr(1));
+                return (filter === 'all' || entry.status.toLowerCase() === filter) && entryPrice <= maxPrice;
+            });
+
+            const rows = filteredData.map((entry, index) => `
+                <tr>
+                    <td>${generateUniqueID()}</td>
+                    <td>${entry.date}</td>
+                    <td>${entry.equipment}</td>
+                    <td>${entry.name}</td>
+                    <td>${entry.price}</td>
+                    <td class="${entry.status.toLowerCase()}">${entry.status}</td>
+                </tr>
+            `).join('');
+
+            bookingHistoryBody.innerHTML = rows;
+        }
+
+
+    </script>
+</body>
+</html>

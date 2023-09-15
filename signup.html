@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="x-icon" href="images/logo.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CodePen - Login/Signup Page </title>
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat:200,400,700,900'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:300,400'>
+<link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.2.0/css/all.css'>
+<link rel='stylesheet' href='https://static.fontawesome.com/css/fontawesome-app.css'><link rel="stylesheet" href="./signup.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="main-page">
+
+  <div class="smooth login" id="login">
+  <h1 class="login__header header">Welcome back to Asset Management System</h1>
+  <p class="login__byline">It's good to see you again,Let's get you started </p>
+  <div class="social-media__container">
+    <span class="fa-stack fa-lg social-media__icon icon">
+    <i class="fas fa-circle fa-stack-2x" style="color: #48556D;"></i>
+    <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+    </span>  
+     <span class="fa-stack fa-lg social-media__icon icon">
+    <i class="fas fa-circle fa-stack-2x" style="color: #DF4D3B;"></i>
+    <i class="fab fa-google-plus-g fa-stack-1x fa-inverse"></i>
+    </span>   
+  </div>
+  <fieldset class="form">
+    <legend class="form__legend">OR</legend>
+  <form action="" class="form__body form-login">  
+    <input class="form__input" type="email" placeholder="email">
+    <input class="form__input" type="password" placeholder="password">   
+     <button class="btn" type="submit"><a href="user.html"style="color:white">Sign in</a></button> 
+  </form>  
+    </fieldset>
+</div>
+
+  <div class="switch">
+  <div class="switch__text-container"  id="switch-text">
+    <h1 class="switch__header header"><strong>Not yet a member?</strong></h1>
+    <p><a href="admin.html"style="color:white"><strong>Admin SignUp</strong></a>  </p>
+  </div>
+   <button class="btn-white btn" id="switch-button">Sign up</button>
+</div>
+  
+    <div class="smooth signup hide-view" id="signup">
+  <h1 class="signup__header header">Create a new account</h1>
+  <div class="social-media__container">
+    <span class="fa-stack fa-lg social-media__icon icon">
+    <i class="fas fa-circle fa-stack-2x" style="color: #48556D;"></i>
+    <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+    </span>  
+     <span class="fa-stack fa-lg social-media__icon icon">
+    <i class="fas fa-circle fa-stack-2x" style="color: #DF4D3B;"></i>
+    <i class="fab fa-google-plus-g fa-stack-1x fa-inverse"></i>
+    </span>   
+  </div>
+  <fieldset class="form">
+    <legend class="form__legend">OR</legend>
+  <form action="" class="form__body form-login">
+    <div class="input__group">
+        <input class="form__input form__input-half" type="text" placeholder="first name">
+        <input class="form__input form__input-half" type="text" placeholder="last name">
+    </div>
+    <div class="input__group">
+       <input class="form__input form__input-half" type="email" placeholder="email">
+       <input class="form__input form__input-half" type="password" placeholder="password">      
+    </div>
+    <div class="input__group">
+      <input class="form__input-checkbox" type="checkbox"> I have read the <a href="#">terms and conditions</a>
+    </div>
+     <button class="btn" type="submit">Sign up</button> 
+     
+  </form>  
+    </fieldset>
+</div>
+  
+</div>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
